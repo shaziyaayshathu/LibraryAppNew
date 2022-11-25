@@ -1,0 +1,31 @@
+<router-outlet></router-outlet>
+
+
+
+<div class="row heading">
+  
+    <div class="col">
+      <h1>Library Building App</h1> 
+    </div>  
+ </div>
+ <br><br>   
+<div class="row">
+<div class="col login-wrapper" >
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+      <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" name="username" formControlName="username" required >
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input type="password" matInput placeholder="Password" name="password" formControlName="password" required>
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" >Log in</button>
+      </form>
+    </mat-card>
+  </div>
+</div>

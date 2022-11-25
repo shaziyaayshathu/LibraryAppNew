@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+}
+section {
+    display: table;
+  }
+  .container{
+    border: solid 1px burlywood;
+    height: 100%;
+  }
+ img{
+  height: 500px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  
+  
+ }
+  .heading{
+    
+    height: 150px;
+    background-color:black;
+    color: white;
+    font-size: 100px;
+    padding-top: 70px;
+    text-align: center;
+  }
+  .btn{
+    text-align: right;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    float: center;
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  a{
+    text-decoration: none;
+    
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }

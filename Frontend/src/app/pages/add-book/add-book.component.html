@@ -1,0 +1,41 @@
+
+
+<br><br><br>
+<mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Book Details</mat-card-title>
+    </mat-card-header>
+
+<form [formGroup]="addBookForm" (ngSubmit)="addBook()">
+    <mat-card-content>
+ <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault01">Title</label>
+        <input type="text" class="form-control" name="title" id="validationDefault01"  required formControlName="title">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault02">Author</label>
+        <input type="text" class="form-control" name="author" id="validationDefault02"  required formControlName="author">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault03">Publication</label>
+        <input type="text" class="form-control" name="publication" id="validationDefault03" required formControlName="publication">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault04">No of Pages</label>
+        <input type="text" class="form-control" name="noPages" id="validationDefault03" required formControlName="noPages">
+      
+    </div>
+   
+      
+    </div>
+</mat-card-content>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  </mat-card>
