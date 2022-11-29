@@ -29,9 +29,13 @@ export class SignUpComponent {
       this.router.navigateByUrl('/login')
       console.log(response)
       }
-      else{
+     
+      else {
         alert('All the fields are mandatory')
       }
+    },
+    (err) => {
+            alert(err.error.message)
     })
   }
 

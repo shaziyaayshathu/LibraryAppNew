@@ -82,17 +82,32 @@ router.post('/register', (req,res)=>{
         password: req.body.password
         }
         console.log(item)
-        const newUser=new userData(item)
-        newUser.save((error,data)=>{
-            if(error)
+        userData.findOne({username:item.username}).then(user=>{
+            if(user)
             {
-                res.json({"status":"error"})
+                return res.status(401).json({
+                    message: 'Username already exists....Please choose another username !'
+                    
+                });
             }
-            else{
-                res.json({"status":"success","data":data})
+            else
+            {
+                const newUser=new userData(item)
+                newUser.save((error,data)=>{
+                    if(error)
+                    {
+                        res.json({"status":"error"})
+                    }
+                    else{
+                        res.json({"status":"success","data":data})
+                    }
+                })
+                
             }
         })
-        //res.send(saveUser)
+
+
+       
         
     } catch (error) {
         console.log(error)
